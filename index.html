@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;1,600&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <title>E-Commerce Website</title>
+</head>
+<body>
+
+<!-- Menu (navigation bar) -->
+<header>
+    <nav>
+        <ul class="menu_bar1">
+            <div class="hamburger_icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <li id="0" class="home_menu">Home</a></li>
+            <li id="1" class="shop_menu">Shop</a></li>
+            <li id="2" class="magazine_menu">Magazine</a></li>
+        </ul>
+        <ul class="menu_bar2">
+            <li class="cart">
+                <img src="img/CartButton.png" alt="">
+                <div class="quantity">0</div>
+            </li>
+           <li>Login</li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Main content -->
+<main>
+    <!-- Search / Sort by dropdown menu -->
+    <section id="search" class="container search">
+        <div class="input_container search_input_container">
+            <input type="text" placeholder="">
+            <img class="input_img" src="img/Search.png" alt="search_icon">
+        </div>
+        <div class="sort_by_menu_container">
+            <button type="button" class="sortBy_btn">
+                <div class="sortBy_dropDown showSortBy">
+                    <span class="sortBy_text sort_by_default">Sort By</span>
+                    <span class="dropDown_icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+            </button>
+            <div class="container sortBy_lists">
+                <ul class="lists">
+                    <li class="sort_by_list default">Best Match</li>
+                    <li class="sort_by_list low">Lowest Price</li>
+                    <li class="sort_by_list high">Highest Price</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- HOME PAGE -->
+    <!-- main banner slide -->
+    <section id="home" class="tabContent main_banner">
+        <div class="arrowBtn">
+            
+                <div id="leftBtn" class="arrow"><i class="fas fa-chevron-left"></i></div>
+                <div id="rightBtn" class="arrow"><i class="fas fa-chevron-right"></i></div>
+          
+        </div>
+        <div class="mainImg">
+            <div class="mainImgSlide">
+                <img src="img/01.jpg" alt="banner_product_image1">
+            </div>
+            <div class="mainImgSlide">
+                <img src="img/02.jpg" alt="banner_product_image2">
+            </div>
+            <div class="mainImgSlide">
+                <img src="img/03.jpg" alt="banner_product_image3">
+            </div>
+            <div class="mainImgSlide">
+                <img src="img/04.jpg" alt="banner_product_image4">
+            </div>
+            <div class="main_banner_text">
+                <h1>CREATE YOUR CALM</h1>
+                <h3>Relax right here</h3>
+            </div>
+        </div> 
+    </section>
+
+    <!-- SHOP PAGE -->
+    <!-- shop content: products -->
+    <section id="shop" class="tabContent product_listing">
+        <div class="listing_page">
+            <!-- shop content: side bar -->
+            <div class="left_side_bar">
+                <div class="product_side_menu">
+                    <div class="filterBy">Filter By</div>
+    
+                    <!-- side bar: collection -->
+                    <div class="collection_menu_container">
+                        <div class="sideBar collection">
+                            <span class="collection_text">Collection</span>
+                            <span class="toggleArrow collection_arrow"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </div>
+                    <div class="collection_list side_menu_hidden">
+                        <ul>
+                            <li class="collection_list_item">Spring / Summer</li>
+                            <li class="collection_list_item">Autumn / Winter</li>
+                        </ul>
+                    </div>
+    
+                    <!-- side bar: color -->
+                    <div class="color_menu_container">
+                        <div class="sideBar color">
+                            <span class="color_text">Colour</span>
+                            <span class="toggleArrow color_arrow"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </div>
+                    <form>
+                        <div id="color_options" class="color_options side_menu_hidden">
+                        </div>
+                        <div class="category_menu_container">
+                            <div class="sideBar category">
+                                <span class="category_text">Category</span>
+                                <span class="toggleArrow category_arrow"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                        </div>
+                        <div id="category_options" class="category_options side_menu_hidden">
+                        </div>
+                        <!-- side bar: price range slider -->
+                        <div class="priceRangeContainer">
+                            <div class="price_range_title">Price Range</div>
+                            <div class="range_slider">
+                                <div class="range_container">
+                                    <input type="range" id="min-price" name="min-price" value="0" min="0" max="1000"
+                                        step="1" />
+                                    <input type="range" id="max-price" name="max-price" value="1000" min="0" max="1000"
+                                        step="1" />
+                                </div>
+                                <div class="price_text">
+                                    <div class="min_text">
+                                        <span>$</span><input type="number" value="0" min="0" max="1000" />
+                                    </div>
+                                    <div class="max_text">
+                                        <span>$</span><input type="number" value="1000" min="0" max="1000" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input class="sidebar_search" type="submit" value="Search">
+                    </form>
+                </div>
+            </div>
+            <!-- shop content : products container / display products -->
+            <div class="pagination">
+                <div id="products_container">
+                </div>
+                <div class="page_buttons">
+                    <button class="page_down"><i class="fas fa-chevron-left"></i></button>
+                    <div id="pages" class="page_numbers">
+                    </div>
+                   
+                    <button class="page_up"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- MAGAZINE PAGE -->
+    <section id="magazine" class="tabContent detail_page">
+        <div id="item-container" class="product_container">
+                <div class="detail1">
+                    <div class="product_image">
+                        <img class="slide_main" src="img/01.jpg" alt="">
+                    </div>
+                    <div class="item_img_slider">
+                        <div class="backward img_slide_arrow"><i class="fas fa-chevron-left"></i></div>
+                        <img class="slide" src="img/01.jpg" alt="">
+                        <img class="slide" src="img/02.jpg" alt="">
+                        <img class="slide" src="img/03.jpg" alt="">
+                        <img class="slide" src="img/04.jpg" alt="">
+                        <div class="forward img_slide_arrow"><i class="fas fa-chevron-right"></i></div>
+                    </div>
+                </div>
+                <div class="detail2">
+                    <div class="about_product">
+                        <h2 class="product_name">Jules</h2>
+                        <p class="description">Handcrafted holistic visualize platforms integrated generate relationships</p>
+                        <h2 class="price">$ 970</h2>
+                        <p class="delivery">DISPATCHED IN 2-3 WEEKS, <span class="stock">ONLY 4 left</span></p>
+                    </div>
+                    <div class="item_colors">
+                    </div>
+                    <div class="buttons">
+                        <button class="add_to_cart">ADD TO BASKET</button>
+                        <button class="go_to_checkout hidden">GO TO CHECKOUT</button>
+                        <button class="more_details">
+                            <div>
+                                <span>DETAILS</span>
+                                <i class="fas fa-chevron-down"></i> 
+                            </div>
+                        </button>
+                        <div class="product_details hidden">
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+        </div>       
+    </section>
+
+</main>
+
+
+
+<!-- Footer content -->
+<footer>
+    <hr>
+    <nav>
+        <!-- Footer menu -->
+        <ul class="footer_menu">
+            <li>ABOUT US</li>
+            <li>HOW CAN WE HELP</li>
+            <li>SHOP BY ROOM</li>
+            <li>SHOP BY STYLE</li>
+        </ul>
+        <!-- Footer social icons -->
+        <ul class="social_icons">
+            <li class="social_media"><img src="img/instagram 1.png" alt="instagram_icon"></li>
+            <li class="social_media"><img src="img/facebook-logo 1.png" alt="facebook_icon"></li>
+            <li class="social_media"><img src="img/twitter 1.png" alt="twitter_icon"></li>
+        </ul>
+    </nav>
+</footer>
+
+<script src="products.js"></script>
+<script src="index.js"></script>
+<script src="listing.js"></script>
+<script src="product_detail.js"></script>
+
+</body>
+</html>
