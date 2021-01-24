@@ -1,5 +1,10 @@
+html,
 body {
-  padding: 0 2.2% 0 2.2%;
+  overflow-x: hidden;
+}
+
+body {
+  padding: 2.2%;
 }
 body h3 {
   font-family: "Josefin Sans", sans-serif;
@@ -214,6 +219,74 @@ section.main_banner div.mainImg div.main_banner_text h3 {
   border-bottom: 1.4px solid currentColor;
   width: 35%;
   margin: 0;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    padding: 0;
+  }
+
+  nav {
+    margin: 3%;
+  }
+  nav .menu_bar1 li {
+    display: none;
+  }
+  nav .menu_bar2 {
+    padding-right: 4%;
+  }
+  nav .menu_bar2 li:nth-child(2) {
+    display: none;
+  }
+
+  section.search {
+    width: 100%;
+    justify-content: center;
+  }
+  section.search div.input_container {
+    display: block;
+    width: 100%;
+    padding-bottom: 2%;
+  }
+  section.search div.sort_by_menu_container {
+    display: none;
+  }
+
+  section#home {
+    height: 100%;
+  }
+  section#home .arrowBtn #leftBtn,
+section#home .arrowBtn #rightBtn {
+    font-size: 2.4em;
+  }
+  section#home div.mainImg {
+    height: 100%;
+  }
+  section#home div.mainImg .mainImgSlide img {
+    height: 400px;
+    object-fit: cover;
+  }
+  section#home div.mainImg .main_banner_text {
+    margin: 6%;
+  }
+  section#home div.mainImg .main_banner_text h1 {
+    font-size: 1.8em;
+  }
+  section#home div.mainImg .main_banner_text h3 {
+    font-size: 1.1em;
+  }
+}
+footer hr {
+  display: none;
+}
+footer nav {
+  display: flex;
+  flex-direction: column;
+}
+footer nav .social_icons {
+  padding: 10%;
 }
 
 /* SHOP PAGE */

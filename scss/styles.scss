@@ -1,5 +1,10 @@
+html,
 body {
-  padding: 0 2.2% 0 2.2%;
+  overflow-x: hidden;
+}
+
+body {
+  padding: 2.2%;
   h3 {
     font-family: "Josefin Sans", sans-serif;
     font-weight: 400;
@@ -236,6 +241,90 @@ section.main_banner {
     }
   }
 }
+
+/* MOBILE */
+
+$breakpoint-mobile: 600px;
+@media (max-width: $breakpoint-mobile) {
+  body {
+    width: 100%;
+    padding: 0;
+  }
+
+  nav {
+    margin: 3%;
+    .menu_bar1 {
+      li {
+        display: none;
+      }
+    }
+    .menu_bar2 {
+      padding-right: 4%;
+      li:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  section.search {
+    width: 100%;
+    justify-content: center;
+    div.input_container {
+      display: block;
+      width: 100%;
+      padding-bottom: 2%;
+    }
+    div.sort_by_menu_container {
+      display: none;
+    }
+  }
+
+  section#home {
+    height: 100%;
+    .arrowBtn {
+      #leftBtn,
+      #rightBtn {
+        font-size: 2.4em;
+      }
+    }
+    div.mainImg {
+      height: 100%;
+      .mainImgSlide {
+        img {
+          height: 400px;
+          object-fit: cover;
+        }
+      }
+      .main_banner_text {
+        margin: 6%;
+        h1 {
+          font-size: 1.8em;
+        }
+        h3 {
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  hr {
+      display: none;
+    }
+  nav {
+    display: flex;
+    flex-direction: column;
+    .social_icons {
+      padding: 10%;
+    }  
+    // ul:nth-child(2) {
+    //   order: -1;
+    // }  
+  }
+}
+
+///////////////////////
 
 /* SHOP PAGE */
 /* Left side search menu - price range slider */
