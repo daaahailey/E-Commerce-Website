@@ -111,7 +111,7 @@ const renderProduct = (product) => {
 
   img.src = `img/${typeName}.png`;
   productCard.prepend(img);
-console.log(img);
+
   // select product
   productCard.addEventListener("click", () => {
     selectProduct(product);
