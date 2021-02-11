@@ -106,7 +106,7 @@ const renderProduct = (product) => {
   productsContainer.append(productCard);
 
   // product image
-  const typeName = productType.innerText.toUpperCase();
+  const typeName = productType.innerText.toLowerCase();
   const img = document.createElement("img");
 
   img.src = `img/${typeName}.png`;
