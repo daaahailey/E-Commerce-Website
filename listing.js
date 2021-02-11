@@ -106,11 +106,12 @@ const renderProduct = (product) => {
   productsContainer.append(productCard);
 
   // product image
-  const typeName = productType.innerText;
+  const typeName = productType.innerText.toUpperCase();
   const img = document.createElement("img");
+
   img.src = `img/${typeName}.png`;
   productCard.prepend(img);
-
+console.log(img);
   // select product
   productCard.addEventListener("click", () => {
     selectProduct(product);
