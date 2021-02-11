@@ -6,6 +6,47 @@ const home = document.querySelector("#home");
 const shop = document.querySelector("#shop");
 
 
+// Hamburger menu
+const hamburger = document.querySelector(".hamburger");
+const menu = document.querySelector(".navbar");
+const theBody = document.querySelector("body");
+const hamMenus = document.querySelectorAll(".ham_list_menu");
+
+hamburger.addEventListener("click", function () {
+  hamburger.classList.toggle("isactive");
+  menu.classList.toggle("active");
+});
+
+const openHamTab = (event) => {
+
+  const hamMenu = event.target;
+
+  const menuList = Array.from(hamMenus);
+  const menuIndex = menuList.indexOf(hamMenu);
+  console.log(hamMenu)
+  console.log(menuList)
+  console.log(menuIndex)
+
+  hamburger.classList.toggle("isactive");
+  menu.classList.toggle("active");
+    
+  tabContent.forEach((content) => {
+    content.classList.add("hidden"); // makes every content hidden
+  });
+  // console.log(tabContent);
+  // console.log(tabContent[menuIndex])
+  menuList.forEach((menu) => {
+      tabContent[menuIndex].classList.remove("hidden"); // display the only content that's chosen.
+    });
+}
+
+hamMenus.forEach(menu => {
+  menu.addEventListener("click", openHamTab)
+})
+
+
+
+
 const init = () => {
   tabContent.forEach((content) => {
   content.classList.add("hidden");

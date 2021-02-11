@@ -15,24 +15,38 @@
 
 <!-- Menu (navigation bar) -->
 <header>
+    <!-- Hamburger Menu -->
+    <div class="ham_menu_container">
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <menu class="navbar">
+            <ul>
+                <li class="ham_list_menu">Home</li>
+                <li class="ham_list_menu">Shop</li>
+                <li class="ham_list_menu">Magazine</li>
+            </ul>
+        </menu>
+    </div>
     <nav>
-        <ul class="menu_bar1">
-            <div class="hamburger_icon">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <li id="0" class="home_menu">Home</a></li>
-            <li id="1" class="shop_menu">Shop</a></li>
-            <li id="2" class="magazine_menu">Magazine</a></li>
-        </ul>
-        <ul class="menu_bar2">
-            <li class="cart">
-                <img src="img/CartButton.png" alt="">
-                <div class="quantity">0</div>
-            </li>
-           <li>Login</li>
-        </ul>
+        
+        <div class="nav_menu">
+            <ul class="menu_bar1">
+                <li id="0" class="home_menu">Home</li>
+                <li id="1" class="shop_menu">Shop</li>
+                <li id="2" class="magazine_menu">Magazine</li>
+            </ul>
+            <ul class="menu_bar2">
+                <li class="cart">
+                    <img src="img/CartButton.png" alt="">
+                    <div class="quantity">0</div>
+                </li>
+                <li>Login</li>
+            </ul>
+        </div>
+        
     </nav>
 </header>
 
@@ -93,7 +107,7 @@
 
     <!-- SHOP PAGE -->
     <!-- shop content: products -->
-    <section id="shop" class="tabContent product_listing">
+    <section id="shop" class="section_shop tabContent product_listing">
         <div class="listing_page">
             <!-- shop content: side bar -->
             <div class="left_side_bar">
@@ -180,6 +194,12 @@
                 <div class="detail1">
                     <div class="product_image">
                         <img class="slide_main" src="img/01.jpg" alt="">
+                        <div class="dot_slider">
+                            <span class="dot active" ></span>
+                            <span class="dot" ></span>
+                            <span class="dot" ></span>
+                            <span class="dot" ></span>
+                        </div>
                     </div>
                     <div class="item_img_slider">
                         <div class="backward img_slide_arrow"><i class="fas fa-chevron-left"></i></div>

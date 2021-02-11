@@ -184,6 +184,8 @@ const backwardBtn = document.querySelector(".backward");
 const slideMain = document.querySelector(".slide_main");
 const slides = document.querySelectorAll(".slide");
 
+
+
 const productImgSlide = () => {
     backwardBtn.addEventListener("click", displayPrevious);
     forwardBtn.addEventListener("click", displayNext)
@@ -195,7 +197,12 @@ const displayPrevious = () => {
       currentNum = 4;
     }
     slideMain.src = `img/0${currentNum}.jpg`;
-    // console.log(currentNum);   
+    // console.log(currentNum);
+    dots.forEach(dot => {
+      dot.classList.remove("active");
+    })
+    dots[currentNum-1].classList.add("active")
+
 };
 
 const displayNext = () => {
@@ -205,6 +212,11 @@ const displayNext = () => {
     }
     slideMain.src = `img/0${currentNum}.jpg`; 
     // console.log(currentNum)
+    dots.forEach((dot) => {
+      dot.classList.remove("active");
+    });
+    dots[currentNum - 1].classList.add("active");
+
 };
 
 
@@ -214,11 +226,31 @@ slides.forEach(slide => {
         const slideIndex = slideString.slice(-6);
         const index = slideIndex.split("")[1];
         slideMain.src = slide.src;
-        currentNum = parseInt(index);
+        currentNum = parseInt(index);     
     }) 
 })
 
 productImgSlide();
+
+
+// Display image slide by chosen dot
+// Responsive slider - works when the screen size is 768px or smaller;
+const dots = document.querySelectorAll(".dot");
+
+const slideDotControl = (event) => {
+  const dotArray = Array.from(dots); 
+  const currentDot = event.target;
+  const index = dotArray.indexOf(currentDot)
+  dots.forEach((dot) => {
+    dot.classList.remove("active");
+  });
+  currentDot.classList.add("active");
+  slideMain.src = `img/0${index+1}.jpg`; 
+}
+dots.forEach(dot => {
+  dot.addEventListener("click", slideDotControl)
+})
+
 
 
 
