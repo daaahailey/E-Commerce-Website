@@ -2,6 +2,7 @@
 E-Commerce Website built with Vanilla JS
 The product data is provided in products.js.
 [CLICK THIS](https://daaahailey.github.io/E-Commerce-Website/) to see the Demo!
+![](https://github.com/daaahailey/E-Commerce-Website/blob/main/img/ecom.gif)
 
 ## Pages 
 * HOME - Main 
